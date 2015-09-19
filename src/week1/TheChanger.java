@@ -89,7 +89,7 @@ public class TheChanger {
 
     public void run() {
 
-        String csvFileToRun = "/Users/ben/IdeaProjects/week1/src/week1/findandreplace.txt";
+        String csvFileToRun = "findandreplace.txt";
         BufferedReader br = null;
         String line = "";
         String splitIcon = "[,:]";

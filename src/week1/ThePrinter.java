@@ -18,7 +18,7 @@ public class ThePrinter {
     protected String userOldWorldName;
     protected String insertOldWorldName;
     //Map<String,String> companyTokens = new HashMap<String,String>();
-    String input = "/Users/ben/IdeaProjects/week1/src/week1/input.txt";
+    String input = "input.txt";
     String line = null;
     BufferedReader br;
     PrintWriter printWriter = null;
