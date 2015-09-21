@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class ReadTheDocs {
 
-    protected Map<String, String> wholeContact = new HashMap<>();
+    public Map<String, String> wholeContact = new HashMap<>();
 
     public void readInValues(String csvFileToRun, String fileToBeChanged, String finalOutPutFile) {
 
@@ -45,7 +45,6 @@ public class ReadTheDocs {
                 }
             }
         }
-
         Change printOutLetter = new Change();
         printOutLetter.changeTheDefaultToValues(wholeContact,fileToBeChanged, finalOutPutFile);
     }//end readInValues
