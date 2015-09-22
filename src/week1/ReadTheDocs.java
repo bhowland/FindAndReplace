@@ -11,8 +11,17 @@ import java.util.Map;
 public class ReadTheDocs {
 
     public Map<String, String> wholeContact = new HashMap<>();
+    public String csvFileToRun;
+    protected String fileToBeChanged;
+    protected String finalOutPutFile;
 
-    public void readInValues(String csvFileToRun, String fileToBeChanged, String finalOutPutFile) {
+    public ReadTheDocs(String csvFileToRun, String fileToBeChanged, String finalOutPutFile){
+        this.csvFileToRun = csvFileToRun;
+        this.fileToBeChanged = fileToBeChanged;
+        this.finalOutPutFile = finalOutPutFile;
+    }
+
+    public void readInValues() {
 
         BufferedReader br = null;
         String line = "";

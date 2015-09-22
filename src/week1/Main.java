@@ -5,7 +5,7 @@ package week1;
  */
 public class Main {
     public static void main(String[] args) {
-        ReadTheDocs newLetter = new ReadTheDocs();
-        newLetter.readInValues("findandreplace.txt", "input.txt", "readyToSend.txt");
+        ReadTheDocs newLetter = new ReadTheDocs("findandreplace.txt", "input.txt", "readyToSend.txt");
+        newLetter.readInValues();
     }
 }
