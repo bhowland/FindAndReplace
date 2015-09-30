@@ -54,7 +54,7 @@ public class ReadTheDocs {
                 }
             }
         }
-        Change printOutLetter = new Change();
-        printOutLetter.changeTheDefaultToValues(wholeContact,fileToBeChanged, finalOutPutFile);
+        Change printOutLetter = new Change(wholeContact,fileToBeChanged, finalOutPutFile);
+        printOutLetter.changeTheDefaultToValues();
     }//end readInValues
 }

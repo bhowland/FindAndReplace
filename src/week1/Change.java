@@ -10,11 +10,21 @@ import java.util.Map;
  */
 public class Change {
 
-    String line = null;
-    BufferedReader br;
-    protected List<String> wholeFile = new ArrayList<>();
+    public String line = null;
+    public BufferedReader br;
+    public List<String> wholeFile = new ArrayList<>();
+    public Map<String, String> wholeContact;
+    public String fileToBeChanged;
+    public String finalOutPutFile;
 
-    public void changeTheDefaultToValues(Map<String, String> wholeContact, String fileToBeChanged, String finalOutPutFile) {
+    public Change(Map<String, String> wholeContact, String fileToBeChanged, String finalOutPutFile){
+        this.wholeContact = wholeContact;
+        this.fileToBeChanged = fileToBeChanged;
+        this.finalOutPutFile = finalOutPutFile;
+
+    }
+
+    public void changeTheDefaultToValues() {
         Reprint reprint = new Reprint();
         try {
             br = new BufferedReader(new FileReader(fileToBeChanged));

@@ -30,7 +30,7 @@ public class TestReadTheDocs {
     @Test
     public void testCorrectMapping(){
 
-        ReadTheDocs sizeOfMap = new ReadTheDocs("findandreplace.txt", "input.txt", "readyToSend.txt");
+        ReadTheDocs sizeOfMap = new ReadTheDocs("testFiles\\findandreplace.txt", "testFiles\\input.txt", "testFiles\\readyToSend.txt");
         String testMessage = "Map should be size of 4.";
         sizeOfMap.readInValues();
         assertTrue(testMessage, sizeOfMap.wholeContact.size() == 4);
@@ -39,19 +39,8 @@ public class TestReadTheDocs {
 
      @Test
      public void testCorrectValues() {
-         ReadTheDocs valueOfMap = new ReadTheDocs("findandreplace.txt", "input.txt", "readyToSend.txt");
+         ReadTheDocs valueOfMap = new ReadTheDocs("testFiles\\findandreplace.txt", "testFiles\\input.txt", "testFiles\\readyToSend.txt");
          valueOfMap.readInValues();
          assertEquals("Great Lakes", valueOfMap.wholeContact.get("<<COMPANY_NAME>>"));
      }
-
-    @Test(expected = FileNotFoundException.class)
-    public void testForFileNotFound() {
-        String csvFileToRun = "null.txt";
-        String fileToBeChanged = "input.txt";
-        String finalOutPutFile = "readyToSend.txt";
-        ReadTheDocs noFile = new ReadTheDocs(csvFileToRun, fileToBeChanged, finalOutPutFile);
-        //noFile.readInValues();
-        fail("Expected a FileNotFoundException");
-    }
-
 }
