@@ -25,7 +25,7 @@ public class Change {
     }
 
     public void changeTheDefaultToValues() {
-        Reprint reprint = new Reprint();
+        Reprint reprint = new Reprint(wholeFile, finalOutPutFile);
         try {
             br = new BufferedReader(new FileReader(fileToBeChanged));
 
@@ -34,7 +34,7 @@ public class Change {
                     line = line.replaceAll(entry.getKey(), entry.getValue());
                 }
                 wholeFile.add(line);
-                reprint.finalPrintFile(wholeFile, finalOutPutFile);
+                reprint.finalPrintFile();
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

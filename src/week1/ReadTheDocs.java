@@ -5,6 +5,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import org.apache.log4j.Logger;
+
 /**
  * Created by ben on 9/18/2015.
  */
@@ -14,8 +16,10 @@ public class ReadTheDocs {
     public String csvFileToRun;
     protected String fileToBeChanged;
     protected String finalOutPutFile;
+    private final Logger logger = Logger.getLogger(ReadTheDocs.class);
 
-    public ReadTheDocs(String csvFileToRun, String fileToBeChanged, String finalOutPutFile){
+    public ReadTheDocs(String csvFileToRun, String fileToBeChanged, String finalOutPutFile) {
+        logger.info("here in the constructor");
         this.csvFileToRun = csvFileToRun;
         this.fileToBeChanged = fileToBeChanged;
         this.finalOutPutFile = finalOutPutFile;
@@ -50,6 +54,7 @@ public class ReadTheDocs {
                 try{
                     br.close();
                 }catch (IOException e){
+                    logger.error("captin oh captin", e);
                     e.printStackTrace();
                 }
             }

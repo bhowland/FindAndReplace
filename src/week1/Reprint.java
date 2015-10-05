@@ -8,7 +8,17 @@ import java.util.List;
  */
 public class Reprint {
 
-    public void finalPrintFile(List<String> printOut, String finalOutPutFile) {
+    List<String> printOut;
+    String finalOutPutFile;
+
+    public Reprint(List<String> printOut, String finalOutPutFile){
+        this.printOut = printOut;
+        this.finalOutPutFile = finalOutPutFile;
+
+
+    }
+
+    public void finalPrintFile() {
 
         PrintWriter printWriter = null;
 
