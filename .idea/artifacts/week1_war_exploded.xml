@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="week1:war exploded">
+  <artifact type="jar" name="week1:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/week1_war_exploded</output-path>
-    <root id="root">
+    <root id="archive" name="week1_war exploded.jar">
       <element id="javaee-facet-resources" facet="week1/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
