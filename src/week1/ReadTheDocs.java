@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 
 /**
  * Created by ben on 9/18/2015.
+ * now a web sevice
  */
 public class ReadTheDocs {
 
